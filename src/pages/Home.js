@@ -8,11 +8,8 @@ export class Home extends Component {
         super(props)
 
         this.state = {
-<<<<<<< HEAD
             popular: [],
             isLoading: true,
-=======
->>>>>>> parent of c7db567 (Calling api komik popular)
             images: [
                 require('../assets/img/1.jpg'),
                 require('../assets/img/2.jpg'),
@@ -23,7 +20,6 @@ export class Home extends Component {
         }
     }
 
-<<<<<<< HEAD
     componentDidMount = async () => {
         await Http.get('manga/popular/1')
             .then(res => {
@@ -34,8 +30,6 @@ export class Home extends Component {
 
     }
 
-=======
->>>>>>> parent of c7db567 (Calling api komik popular)
     render() {
         return (
             <Wrapper>
