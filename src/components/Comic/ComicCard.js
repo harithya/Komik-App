@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text, Image, StyleSheet } from 'react-native'
-import { Color } from '../utils'
+import { Color } from '../../utils'
 
 export default function Comic() {
     return (

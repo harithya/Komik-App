@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { StyleSheet, Text, View, ScrollView } from 'react-native'
-import { Wrapper, Carousel, Container, Comic } from '../components';
+import { Wrapper, Carousel, Container, ComicCard } from '../components';
 import { Color } from '../utils';
 
 export class Home extends Component {
@@ -27,12 +27,12 @@ export class Home extends Component {
                         <Text style={styles.title}>Rekomendasi</Text>
                     </Container>
                     <ScrollView style={{ marginLeft: 16, marginRight: 16 }} horizontal={true}>
-                        <Comic />
-                        <Comic />
-                        <Comic />
-                        <Comic />
-                        <Comic />
-                        <Comic />
+                        <ComicCard />
+                        <ComicCard />
+                        <ComicCard />
+                        <ComicCard />
+                        <ComicCard />
+                        <ComicCard />
                     </ScrollView>
                 </View>
             </Wrapper>
