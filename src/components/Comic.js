@@ -2,17 +2,17 @@ import React from 'react'
 import { View, Text, Image, StyleSheet } from 'react-native'
 import { Color } from '../utils'
 
-export default function Comic() {
+export default function Comic(props) {
     return (
-        <View style={styles.card}>
+        <View style={[styles.card, props.style]}>
             <Image
                 source={{
-                    uri: 'https://cover.komiku.id/wp-content/uploads/2018/08/Komik-Martial-Peak.jpeg?resize=450,235&quality=60'
+                    uri: props.item.thumb
                 }}
                 style={styles.image} />
             <View style={styles.body}>
-                <Text style={styles.type}>Manga</Text>
-                <Text style={styles.title}>God of Cooking</Text>
+                <Text style={styles.type}>{props.item.type}</Text>
+                <Text numberOfLines={2} ellipsizeMode='tail' style={styles.title}>{props.item.title}</Text>
             </View>
         </View>
     )
@@ -25,8 +25,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: Color.border,
         borderRadius: 6,
-        marginRight: 0,
-        marginLeft: 16,
+        marginRight: 16
     },
     body: {
         padding: 5,
@@ -40,13 +39,13 @@ const styles = StyleSheet.create({
         borderTopLeftRadius: 5,
     },
     title: {
-        fontSize: 12,
+        fontSize: 11,
         fontFamily: 'Nunito-Regular',
         color: Color.font,
         paddingBottom: 5
     },
     type: {
-        fontSize: 10,
+        fontSize: 9,
         fontFamily: 'Nunito-Regular',
         color: Color.muted
     }
