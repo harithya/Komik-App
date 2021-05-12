@@ -9,6 +9,7 @@ export class Home extends Component {
 
         this.state = {
             popular: [],
+            isLoading: true,
             images: [
                 require('../assets/img/1.jpg'),
                 require('../assets/img/2.jpg'),
@@ -22,8 +23,11 @@ export class Home extends Component {
     componentDidMount = async () => {
         await Http.get('manga/popular/1')
             .then(res => {
-                this.setState({ 'popular': res.data.manga_list })
+                this.setState({
+                    'popular': res.data.manga_list
+                })
             })
+
     }
 
     render() {
