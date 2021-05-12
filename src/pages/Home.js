@@ -1,10 +1,11 @@
 import React from 'react'
 import { View, Text } from 'react-native'
+import { Wrapper } from '../components';
 
 export default function Home() {
     return (
-        <View>
+        <Wrapper>
             <Text>Home</Text>
-        </View>
+        </Wrapper>
     )
 }
