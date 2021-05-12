@@ -14,7 +14,7 @@ const BottomNavigation = () => {
                 inactiveTintColor: Color.font,
                 style: {
                     height: 65,
-                    paddingBottom: 5
+                    paddingBottom: 5,
                 },
                 labelStyle: {
                     fontSize: 12,
