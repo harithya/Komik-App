@@ -1,15 +1,18 @@
 import React, { Component } from 'react'
 import { StyleSheet, Text, View, ScrollView } from 'react-native'
 import { Wrapper, Carousel, Container, Comic } from '../components';
-import { Color, Http } from '../utils';
+import { Color } from '../utils';
 
 export class Home extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
+<<<<<<< HEAD
             popular: [],
             isLoading: true,
+=======
+>>>>>>> parent of c7db567 (Calling api komik popular)
             images: [
                 require('../assets/img/1.jpg'),
                 require('../assets/img/2.jpg'),
@@ -20,6 +23,7 @@ export class Home extends Component {
         }
     }
 
+<<<<<<< HEAD
     componentDidMount = async () => {
         await Http.get('manga/popular/1')
             .then(res => {
@@ -30,21 +34,23 @@ export class Home extends Component {
 
     }
 
+=======
+>>>>>>> parent of c7db567 (Calling api komik popular)
     render() {
         return (
             <Wrapper>
                 <Carousel images={this.state.images} />
                 <View style={styles.section}>
                     <Container>
-                        <Text style={styles.title}>Populer</Text>
+                        <Text style={styles.title}>Rekomendasi</Text>
                     </Container>
-                    <ScrollView
-                        showsHorizontalScrollIndicator={false}
-                        contentContainerStyle={styles.scroll}
-                        horizontal={true}>
-                        {this.state.popular.map((val, key) => {
-                            return (<Comic key={key} item={val} />)
-                        })}
+                    <ScrollView style={{ marginLeft: 16, marginRight: 16 }} horizontal={true}>
+                        <Comic />
+                        <Comic />
+                        <Comic />
+                        <Comic />
+                        <Comic />
+                        <Comic />
                     </ScrollView>
                 </View>
             </Wrapper>
@@ -61,10 +67,6 @@ const styles = StyleSheet.create({
         fontFamily: 'Nunito-SemiBold',
         color: Color.font,
         marginBottom: 15
-    },
-    scroll: {
-        paddingRight: 16,
-        paddingLeft: 16,
     }
 })
 
