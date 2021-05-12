@@ -11,7 +11,7 @@ const BottomNavigation = () => {
             initialRouteName="Home"
             tabBarOptions={{
                 activeTintColor: Color.primary,
-                inactiveTintColor: Color.font,
+                inactiveTintColor: Color.muted,
                 style: {
                     height: 65,
                     paddingBottom: 5,

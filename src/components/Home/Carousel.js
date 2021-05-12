@@ -25,8 +25,8 @@ const styles = StyleSheet.create({
     search: {
         position: 'absolute',
         zIndex: 99999,
-        right: 15,
-        top: 15
+        right: 16,
+        top: 16
 
     }
 })

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
-import { Wrapper, Carousel } from '../components';
+import { StyleSheet, Text, View, ScrollView } from 'react-native'
+import { Wrapper, Carousel, Container, Comic } from '../components';
+import { Color } from '../utils';
 
 export class Home extends Component {
     constructor(props) {
@@ -21,9 +22,34 @@ export class Home extends Component {
         return (
             <Wrapper>
                 <Carousel images={this.state.images} />
+                <View style={styles.section}>
+                    <Container>
+                        <Text style={styles.title}>Rekomendasi</Text>
+                    </Container>
+                    <ScrollView style={{ marginLeft: 16, marginRight: 16 }} horizontal={true}>
+                        <Comic />
+                        <Comic />
+                        <Comic />
+                        <Comic />
+                        <Comic />
+                        <Comic />
+                    </ScrollView>
+                </View>
             </Wrapper>
         )
     }
 }
+
+const styles = StyleSheet.create({
+    section: {
+        marginTop: 20,
+    },
+    title: {
+        fontSize: 16,
+        fontFamily: 'Nunito-SemiBold',
+        color: Color.font,
+        marginBottom: 15
+    }
+})
 
 export default Home
