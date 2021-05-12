@@ -1,10 +1,10 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 
-export default function Home() {
+export default function Gendre() {
     return (
         <View>
-            <Text>Home</Text>
+            <Text>Gendre</Text>
         </View>
     )
 }
