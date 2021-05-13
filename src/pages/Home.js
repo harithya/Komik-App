@@ -22,8 +22,7 @@ export class Home extends Component {
     componentDidMount = async () => {
         await Http.get('manga/popular/1')
             .then(res => {
-                // this.setState({ 'popular': res.data.manga_list })
-                console.log(res);
+                this.setState({ 'popular': res.data.manga_list })
             })
     }
 
