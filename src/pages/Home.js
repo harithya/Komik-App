@@ -24,6 +24,8 @@ export class Home extends Component {
             .then(res => {
                 this.setState({ 'popular': res.data.manga_list })
             })
+
+        console.log('hello');
     }
 
     render() {
