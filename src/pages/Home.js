@@ -22,9 +22,9 @@ export class Home extends Component {
     componentDidMount = async () => {
         await Http.get('manga/popular/1')
             .then(res => {
-                this.setState({ 'popular': res.data.manga_list })
+                // this.setState({ 'popular': res.data.manga_list })
+                console.log(res);
             })
-        console.log(this.state.popular);
     }
 
     render() {
